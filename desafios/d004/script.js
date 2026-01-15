@@ -10,5 +10,6 @@ function tabuada() {
         for (let i=1; i <= 10; i++) {
             res.innerHTML += `${num} x ${i} = ${num*i}\n`
         }
+        res.cols = 12
     }
 }
