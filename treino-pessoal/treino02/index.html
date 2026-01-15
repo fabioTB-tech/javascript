@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #bloco {
+            background-color: rgb(112, 157, 255);
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="bloco"></div>
+    
+    <script>
+        var bloco = document.getElementById('bloco')
+        bloco.addEventListener('mousemove', move)
+        
+        function move() {
+            bloco.innerHTML = `<p>X: ${event.clientX} Y: ${event.clientY}</p>`
+        }
+
+        function aumenta() {
+            if (event.key == 's') {
+                document.getElementById('bloco').style.marginTop += 100
+            }
+        }
+        bloco.addEventListener('keydown', aumenta)
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha primeira aula de JS</title>
+    <style>
+        body {
+            background-color: #8d8dff;
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: yellow;
+        }
+
+        button {
+            display: block;
+            background-color: #7676fd;
+            color: white;
+            border: 1px dashed slateblue;
+            padding: 15px;
+            border-radius: 2cm;
+            transition: 0.2s;
+            width: 200px;
+            margin: auto;
+        }
+
+        button:hover {
+            background-color: #6666ff;
+            border-color: #503ec4;
+            padding: 25px;
+            width: 210px;
+            transform: translateY(-10px);
+            border-radius: 2cm;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Olá, Mundo!</h1>
+
+    <p>Já me livrei da maldição</p>
+    <button onclick="ola()">Clique em mim!</button>
+
+    <script>
+        function ola() { 
+            var nome = window.prompt('Qual é seu nome?')
+            window.alert("Bem vindo(a), " + nome) // Concatenação
+        }
+    </script>
+</body>
+</html>
